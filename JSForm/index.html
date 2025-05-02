@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outer">
+        <div class="header">
+            <h1 class="heading">Submit your application</h1>
+            <h3>for <b>.NET Developer (Fresher)</b></h3>
+        </div>
+        <div class="nav-bar">
+            <div class="nav-bu">
+                <div class="icon"><button>1</button></div><div class="div"><hr style="color: black;width: 150px;"></div>
+                <div class="icon"><button>2</button></div><div class="div"><hr style="color: black;width: 150px;"></div>
+                <div class="icon"><button>3</button></div><div class="div"><hr style="color: black;width: 150px;"></div>
+                <div class="icon"><button>4</button></div>
+            </div>
+            <div class="nav-name">
+                <div class="name">Personal Information</div>
+                <div class="name">Education and Experience</div>
+                <div class="name">Upload Resume</div>
+                <div class="name">Referral Information</div>
+            </div>
+        </div>
+        <div class="form-in">
+            <div class="left">
+                <h2>Personal Information</h2>
+                <form id="form">
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="UserName">Name as per ID proof*</label><br>
+                            <span id="name-error" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="text" name="UserName" id="UserName" required placeholder="Enter the name"><br><br>
+                        </div>
+                        <div class="input-group">
+                            <label for="FatherName">Father's Name*</label><br>
+                            <span id="fathername-error" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="text" name="FatherName" id="FatherName" required placeholder="Enter the father's name"><br><br>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="Email">Email*</label><br>
+                            <span id="mail-error" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="text" name="Email" id="Email" placeholder="Enter the email"><br><br>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="DOB">Date Of Birth*</label><br>
+                            <span id="dob-error" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="date" name="DOB" id="DOB"><br><br>
+                        </div>
+                        <div class="input-group">
+                            <label for="Mobile">Mobile no.*</label><br>
+                            <span id="mobile-error" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="number" name="Mobile" id="Mobile"><br><br>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="Address">Current Address</label><br>
+                            <span id="address-error" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="text" name="Address1" id="Address1" placeholder="AddressLine1"><br><br>
+                        </div>
+                        <div class="input-group">
+                            <label for="Address"></label><br><br>
+                            <span id="address-error1" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="text" name="Address2" id="Address2" placeholder="AddressLine2"><br><br>
+                        </div>
+                    </div>
+
+                    <div class="row"> 
+                        <div class="input-group">
+                            <span id="city-error" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="text" name="city" id="city" placeholder="Enter the city">
+                        </div>
+                        <div class="input-group">
+                            <span id="state-error" style="color: red; font-size: 0.8rem;"></span>
+                            <select class="state" id="state">
+                                <option value="TamilNadu">Tamil Nadu</option>
+                                <option value="AndhraPradesh">Andhra Pradesh</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <span id="code-error" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="number" name="code" id="code" placeholder="Enter the zipcode">
+                        </div>
+                    </div>
+
+                    <div class="check">   
+                        <p>Permanent Address*</p>
+                        <input type="checkbox" id="check" onclick="transition()">
+                        <p>Same as Current Address</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <span id="peraddress-error1" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="text" name="Address1" id="permanentAddress1" placeholder="AddressLine1"><br><br>
+                        </div>
+                        <div class="input-group">
+                            <span id="peraddress-error2" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="text" name="Address2" id="permanentAddress2" placeholder="AddressLine2"><br><br>
+                        </div>
+                    </div>
+
+                    <div class="row"> 
+                        <div class="input-group">
+                            <span id="city-error1" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="text" name="city" id="city1" placeholder="Enter the city">
+                        </div>
+                        <div class="input-group">
+                            <span id="state-error1" style="color: red; font-size: 0.8rem;"></span>
+                            <select class="state" id="state1">
+                                <option value="TamilNadu">Tamil Nadu</option>
+                                <option value="AndhraPradesh">Andhra Pradesh</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <span id="code-error1" style="color: red; font-size: 0.8rem;"></span>
+                            <input type="number" name="code" id="code1" placeholder="Enter the zipcode">
+                        </div>
+                    </div>
+
+                    <label for="photo">Photo:</label>
+                    <input type="file" id="photo" accept="image/*"><br><br>  
+
+                </form>
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
